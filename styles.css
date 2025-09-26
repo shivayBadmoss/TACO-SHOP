@@ -143,6 +143,8 @@ header a:not(#logo){
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
+               /* CREATING MENU SYSTEM  */
 #menu{
     background-color: rgba(255, 230, 200, 0.2);            /* this is a Light semi-transparent background behind the paragraph for contrast with the page. */
     border-radius: 15px;                                     /* it will make Round corners of the paragraph box (12px radius). */
@@ -151,6 +153,7 @@ header a:not(#logo){
     text-align: center;
     padding: 50px 20px;
     line-height:3;
+    margin-bottom:0;
 }
 .menu_heading{
     margin-bottom: 25px;
@@ -170,8 +173,8 @@ header a:not(#logo){
 }
                         /* ADDING FOTER  */
 #footer{
-    margin-top: 50px;
-    height: 300px;
+    margin-top:0;
+    height: 350px;
     width: 100%;
     background-color: black;
     /* align-items: center;                 /* Vertically center items 
@@ -179,6 +182,7 @@ header a:not(#logo){
     text-decoration: none; */
 }
 #links{
+    margin-top: 0%;
     text-align: center;
     display:flex;
     align-items: center;
@@ -216,14 +220,20 @@ header a:not(#logo){
 #copyright{
     color: aliceblue;
     justify-content: space-between;     /* spreads items across the width */
-    padding: 30px;
+    padding: 20px;
 }
 #pic{
     display: flex;
     margin-left: 50px;
 }
+#pic img{
+    height:200px;
+    width:auto;
+    border-radius: 50%;
+}
 #pic h6{
-    margin-top: 70px;
+    margin-top: 90px;
+    margin-left: 900px;
 }
 
 /* #shop_photo{
