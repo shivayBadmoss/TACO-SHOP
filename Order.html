@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Rev's Order Page</title>
+</head>
+<body>
+    <header>
+        <h1 align="center"><b><u>Your Subway is Just Few Clicks Away</u></b></h1>
+        <br>
+        <h2><b><u>Customize Your Meal Now: Select Which type of Meal You are Looking for:</u></b></h2>
+        <br>
+    </header>
+    <main>
+        <form action="/action.php">
+
+            <h3>Select Your Meal</h3>
+            <label for="sandwich">Sandwich</label>
+            <input type="checkbox" id="sandwich" name="food" value="Sandwich">
+            <br>
+            <label for="burger">Burger</label>
+            <input type="checkbox" id="burger" name="food" value="Burger">
+            
+            <br>            <br>            <br> 
+
+            <h3>Select The Type Of Bread you Want:</h3>
+            <label for="white-bread">White Bread</label>
+            <input type="radio" id="white-bread" name="bread-type" value="White Bread">
+            <br>
+            <label for="whole-wheat-bread">Whole Wheat Bread</label>
+            <input type="radio" id="whole-wheat-bread" name="bread-type" value="Whole Wheat Bread">
+            <br>
+            <label for="sourdough-bread">sourdough Bread</label>
+            <input type="radio" id="sourdough-bread" name="bread-type" value="sourdough Bread">
+
+            <br>            <br> 
+
+            <h3>Select Veggies:</h3>
+            <label for="lettuce">Lettuce</label>
+            <input type="checkbox" id="lettuce" name="veggies" value="Lettuce">
+            <br>
+            <label for="tomato">Tomato</label>
+            <input type="checkbox" id="tomato" name="veggies" value="Tomato">
+            <br>
+            <label for="cucumber">Cucumber</label>
+            <input type="checkbox" id="cucumber" name="veggies" value="Cucumber">
+            <br>
+            <label for="Peppers">Peppers</label>
+            <input type="checkbox" id="Peppers" name="veggies" value="Peppers">
+            <br>
+            <label for="Olives">Olives</label>
+            <input type="checkbox" id="Olives" name="veggies" value="Olives">
+            <br>
+            <label for="Avacado">Avacado</label>
+            <input type="checkbox" id="Avacado" name="veggies" value="Avacado">
+
+            <br>            <br> 
+            <br>            <br> 
+            <p>Enter Some More Discription of Your Food for Our Chef-</p>
+
+            <textarea name="feedback"id="101"placeholder="Enter Some Discription for your Meal" rows="20" cols="80"></textarea>
+
+            <br>
+            <br>
+
+            <input type="submit" value="Submit Response">
+
+            <button type="reset">Reset Form</button>
+        </form>
+    </main>
+    <br><br><br>
+    <footer>
+    
+        <center>
+        <button onclick="window.open('Confirmation.html', '_blank')" style="width:200px;height:50px;font-size:20px;"Confirm Your Order>Confirm Your Order</button>
+        </center>
+        <br>
+        <br>
+        
+        <button onclick="window.open('index.html', '_blank')" style="width:200px;height:50px;font-size:20px;float:right;"Go_To_MainPage>Go To Main Page</button>
+        
+    </footer>
+</body>
+</html>
