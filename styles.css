@@ -1,57 +1,59 @@
-                                                 /*MAIN*/
-*{
-    padding:0;
-    margin:0;
+/* =========================
+   MAIN RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
-                                                /* BODY <THIS WHERE I HAVE ADDED BACKGROUND OPHOTO >*/
+
+html {
+    font-size: 16px;
+}
+
+/* =========================
+   BODY
+========================= */
 body {
-    background-image: url('Body\ page.png');/* path to your image */
-    background-size: cover;   /* makes it fit the screen */
-    background-repeat: no-repeat; /* stops tiling */
-    background-attachment:fixed; /* keeps it fixed when scrolling */
-    background-position: center; /* centers the image */
+    background-image: url('Body page.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    line-height: 1.5;
 }
-                                                 /*NAV BAR*/
-nav{}
-    /* padding-top: 20px; WE CAN ADD THIS IF WANT TO ADD SPACE  */
 
-/* #nav_bar :hover{
-    background-color: aliceblue;  this will used for adding lifting animation 
-
-} */
-#nav_bar{
-    height: 112px;
-    width: 100%;
-    align-items: center;  /* Vertically center items */
-    justify-content: space-between;  /* Spread items out */
-    background-color:  rgba(62, 58, 53, 0.2);
-}
-#nav_bar_content{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;     /* spreads items across the width */
-    padding: 10px;
-    flex-wrap: wrap;      /* allows wrapping on smaller screens */
-} 
-/* #Menu:hover{
-    background-color: aquamarine;
-} */
-#logo{
-    margin-right:15px;
-    text-decoration: none;
+/* =========================
+   NAVBAR
+========================= */
+#nav_bar {
     display: flex;
-    /* text-size-adjust:; */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: rgba(62, 58, 53, 0.2);
 }
-#logo img{
-    height: 100px;
-    width: 125px;
+
+#nav_bar_content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#logo img {
+    height: 6rem;
+    width: auto;
     border-radius: 50%;
 }
-header a:not(#logo){
-    font-size: 25px;   /*this is where fomt size of all the navs have been updated */
-    margin-right: 10px;
-    margin-left: 0%;
-    text-decoration: none; /*this is where we have all anchor tags  */
+
+header a:not(#logo) {
+    font-size: 1.6rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
     color: rgb(8, 0, 0);
     font-weight: bold;
 }
@@ -59,186 +61,243 @@ header a:not(#logo){
 #form1 {
     display: flex;
     align-items: center;
-    margin: 0; /* remove default form margin */
+    margin-top: 0.5rem;
 }
-#search_bar{
-    /* background-color:; */
-    color:black;
-    padding: 8px;
-    font-size: 15px;
+
+#search_bar {
+    padding: 0.5rem;
+    font-size: 0.9rem;
     border-radius: 5px;
     border: 1px solid black;
+    color: black;
 }
-    
-#search_button{
-    background-color: rgb(7, 3, 45);
-    color: rgb(255, 255, 255);
-    padding: 8px 12px;
-    font-size: 16px;
+
+#search_button {
+    background-color: rgb(12, 12, 12);
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
     border-radius: 5px;
-    background: rgb(12, 12, 12);
     border: none;
+    margin-left: 0.5rem;
+    cursor: pointer;
 }
-/* img{
-    width: 200px;
-    height:auto;
-    margin-left: 20%;
-    margin-right: 20%;    
-} */
 
-                                         /*START OF MAUN CONTENT 1ST THING IS HEADINGS */
-
- .top_heading{
+/* =========================
+   MAIN HEADINGS
+========================= */
+.top_heading {
     color: rgba(255, 255, 0, 1);
-    padding-top: 2%;     /*padding is what creates space between border and main content*/ 
-    padding-bottom: 3%;
-    /* line-height: 2;        line-height is used to add spacing between lines */
     text-align: center;
-    font-size:xxx-large;
-    /* text-decoration: none; */
+    font-size: 2.5rem;
+    padding: 2% 0;
 }
-#second_heading{
-    font-size: 35px;
+
+#second_heading {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#para_1 {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 3rem auto 2rem auto;
+    padding: 1.2rem;
+    background-color: rgba(255, 230, 200, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.1);
+    letter-spacing: 0.5px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+#gallery {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.gallery_heading {
+    font-size: 2rem;
     color: rgb(38, 1, 78);
-    text-align: center;
-    margin-bottom: 30px;
-}
-#para_1{
-    line-height: 1;        /*line-height is used to add spacing between lines */
-    text-align: center;
-    margin-top: 75px;
-    font-size: 22px;
-    background-color: rgba(255, 230, 200, 0.2);            /* this is a Light semi-transparent background behind the paragraph for contrast with the page. */
-    border-radius: 15px;                                     /* it will make Round corners of the paragraph box (12px radius). */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);                /* Adds a subtle shadow under the paragraph to make it appear lifted. */
-    letter-spacing: 0.5px;                                   /* Slightly increases space between letters for readability. */
-     /*transition: 0.3s;                                     Smoothly animates changes (like hover effects) over 0.3 seconds. */
+    margin-bottom: 1.5rem;
 }
 
-/* NOW HERE I AM DOING GALLERY THINGS SO JUS WAUT AND WATCH BCOZ THIS IS GONNA TAKE A WHILE */
-
-#gallery{
-    padding: 50px 20px;
-    text-align: center;
-    /* background-color: rgba(255, 250, 240, 0.8);        THIS WE CAN USE TO BACKGROUND COLOR LIKE WE ADDED IN MAIN P */
-}
-.gallery_heading{
-    margin-bottom: 25px;
-    margin-top:5px;
-    font-size:xx-large;
-    color:rgb(38, 1, 78); 
-}
 .gallery_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
     max-width: 1200px;
-    margin: 0 auto; 
-    /* THIS TOP ONE (MARGIN SECTION) WILL HELP  ELEMENTS TO GUT IN CENTRE ON BOARD */ */
-}
-.gallery_container img {
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    margin: 0 auto;
 }
 
-               /* CREATING MENU SYSTEM  */
-#menu{
-    background-color: rgba(255, 230, 200, 0.2);            /* this is a Light semi-transparent background behind the paragraph for contrast with the page. */
-    border-radius: 15px;                                     /* it will make Round corners of the paragraph box (12px radius). */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);                /* Adds a subtle shadow under the paragraph to make it appear lifted. */
-    letter-spacing: 0.5px;                      
-    text-align: center;
-    padding: 50px 20px;
-    line-height:3;
-    margin-bottom:0;
-}
-.menu_heading{
-    margin-bottom: 25px;
-    margin-top:5px;
-    font-size:xxX-large;
-    color:rgb(38, 1, 78); 
-}
-#menu button {
-    font-size: 25px;             
-   /* font-weight: bold;            make text bold  but mera mn hi nhi h to me kyu lru bhjai*/
-    color: white;                
-    background-color: rgb(19, 5, 90);
-    padding: 15px 40px;          /* bigger clickable area */
-    border: none;               
-    border-radius: 15px;         
-    transition: 0.3s;           
-}
-                        /* ADDING FOTER  */
-#footer{
-    margin-top:0;
-    height: 350px;
+.gallery_container img {
     width: 100%;
-    background-color: black;
-    /* align-items: center;                 /* Vertically center items 
-    justify-content: space-between;                    /* Spread items out 
-    text-decoration: none; */
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.2);
 }
-#links{
-    margin-top: 0%;
+
+/* =========================
+   MENU BUTTON
+========================= */
+#menu {
     text-align: center;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;     /* spreads items across the width */
-    padding: 30px;
-    flex-wrap: wrap;      /* allows wrapping on smaller screens */
-    font-size:x-large;
+    padding: 3rem 1rem;
+    background-color: rgba(255, 230, 200, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.1);
+    letter-spacing: 0.5px;
 }
-#news{
-    text-decoration: none;
-    color: aliceblue;
-}#our_food{
-    text-decoration: none;
-    color: aliceblue;
-}#find_us{
-    text-decoration: none;
-    color: aliceblue;
-}#work_with_us{
-    text-decoration: none;
-    color: aliceblue;
-}#whats_new{
-    text-decoration: none;
+
+.menu_heading {
+    font-size: 2.2rem;
+    color: rgb(38, 1, 78);
+    margin-bottom: 1.5rem;
+}
+
+#menu button {
+    font-size: 1.5rem;
+    padding: 1rem 2.5rem;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    background-color: rgb(19, 5, 90);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#menu button:hover {
+    background-color: rgb(38, 12, 120);
+}
+
+/* =========================
+   FOOTER
+========================= */
+#footer {
+    background-color: black;
+    width: 100%;
+    padding: 2rem 1rem;
     color: aliceblue;
 }
-#about_us{
-    text-decoration: none;
-    color: aliceblue;
-}#contact_us{
-    text-decoration: none;
-    color: aliceblue;
-}#tnc{
-    text-decoration: none;
-    color: aliceblue;
-}
-#copyright{
-    color: aliceblue;
-    justify-content: space-between;     /* spreads items across the width */
-    padding: 20px;
-}
-#pic{
+
+#links {
     display: flex;
-    margin-left: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
-#pic img{
-    height:200px;
-    width:auto;
+
+#links a {
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 1rem;
+}
+
+#copyright {
+    text-align: center;
+}
+
+#pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#pic img {
+    height: 150px;
+    width: auto;
     border-radius: 50%;
 }
-#pic h6{
-    margin-top: 90px;
-    margin-left: 900px;
+
+/* =========================
+   IMAGES AND IFRAME
+========================= */
+img, iframe {
+    max-width: 100%;
+    height: auto;
 }
 
-/* #shop_photo{
-    width: 200px;
-    height:auto;
-    margin-left: 20%;
-    margin-right: 20%;   
-} */
+/* =========================
+   MEDIA QUERIES
+========================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    header a:not(#logo) {
+        font-size: 1.4rem;
+        margin: 0.3rem 0;
+    }
+
+    #para_1, #menu {
+        padding: 1.5rem;
+    }
+
+    .gallery_container {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #nav_bar_content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #logo img {
+        height: 80px;
+    }
+
+    .top_heading {
+        font-size: 2rem;
+    }
+
+    #second_heading {
+        font-size: 1.5rem;
+    }
+
+    #para_1 {
+        font-size: 1rem;
+        margin: 1.5rem 1rem;
+        padding: 1rem;
+    }
+
+    #menu button {
+        font-size: 1.2rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+    header a:not(#logo) {
+        font-size: 1rem;
+    }
+
+    #logo img {
+        height: 60px;
+    }
+
+    .gallery_container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    #menu button {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+    }
+
+    #footer {
+        padding: 1rem;
+    }
+
+    #pic img {
+        height: 120px;
+    }
+}
