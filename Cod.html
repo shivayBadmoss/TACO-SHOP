@@ -3,44 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment_COD</title>
+    <title>COD - Rev's Tacoshop</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<header>
-    <h1 align="center"><b><u>Enter Your Details For Cash On Delivery</u></b></h1>
-    <br>
-    <form action="/action.php">
-        <lable>Your Address: </lable>
-        <input type="text" placeholder="your Address">
-        <br>        <br>
-        <lable>Contact:  </lable>
-        <input type="text" placeholder="Contact">
-        <br>        <br>
-        <lable>Resipants Name:  </lable>
-        <input type="text" placeholder="Resipants Name">
-        <br>        <br>
-        <lable>Alternative Number:  </lable>
-        <input type="text" placeholder="Alternative Number">
-        <br>        <br>        <br>
-        <p>Enter Some More Discription of Your Address for Our Delivery Partner-</p>
-   <textarea name="Additional_info_for_delivery"id="101"placeholder="Enter Some More Discription for Our Delivery Partner" rows="20" cols="80"></textarea>
-   <br><br><br>
-   <input type="submit" value="Submit Response">
-        <br>        <br>       
-   <button type="reset">Reset Form</button>
-   <br><br><br>
-</form>
-</header>
-<main>
-    <center>
-    <button onclick="window.open('contactus.html', '_blank')" style="width:200px;height:50px;font-size:20px;"Go_To_ContactUs>Contact Us</button>
-    </center>
-</main>
-<br><br><br>
-<br><br><br>
-<br><br><br><br>
-<footer>
-    
-    <button onclick="window.open('index.html', '_blank')" style="width:200px;height:50px;font-size:20px;float:right;"Go_To_MainPage>Go To Main Page</button>
-    
-</footer>
+<body>
+    <!-- ================= NAVBAR ================= -->
+    <header>
+        <nav>
+            <div id="nav_bar">
+                <div id="nav_bar_content">
+                    <a id="logo" href="index.html"><img src="image.png" alt="Rev's Tacoshop Logo"></a>
+                    <a href="Menu.html">MENU</a>
+                    <a href="Order.html">ORDER NOW</a>
+                    <a href="Confirmation.html">CONFIRMATION</a>
+                    <a href="Cod.html">COD</a>
+                    <a href="OnlinePay.html">ONLINE PAY</a>
+                    <a href="contactus.html">CONTACT US</a>
+
+                    <!-- Search -->
+                    <form id="form1" action="action.php" method="get">
+                        <input id="search_bar" type="text" placeholder="Search...">
+                        <button id="search_button" type="button" onclick="alert('Search clicked!')">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= PAGE HEADING ================= -->
+    <main>
+        <h1 class="top_heading"><b>Cash On Delivery (COD)</b></h1>
+        <h3 id="second_heading">Pay Only When Your Tacos Arrive!</h3>
+
+        <!-- ================= COD FORM ================= -->
+        <section id="menu" style="margin: 2rem auto; max-width: 600px;">
+            <div class="menu_heading">Fill in Your Details</div>
+            <div style="background-color: rgba(255, 230, 200, 0.2); padding: 2rem; border-radius: 15px; box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.1);">
+                <form id="cod_form">
+                    <label for="name">Full Name:</label><br>
+                   <input type="text" id="name" name="name" placeholder="Your Full Name" required style="width: 100%; padding: 0.5rem; margin: 0.5rem 0; border-radius: 5px; border: 1px solid black;"><br>  <!-- this required will give pop up until the fei;d is not filled -->
+
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="+91 9616020074" required style="width: 100%; padding: 0.5rem; margin: 0.5rem 0; border-radius: 5px; border: 1px solid black;"><br>
+
+                    <label for="address">Delivery Address:</label><br>
+                    <textarea id="address" name="address" rows="4" placeholder="Street, City, ZIP" required style="width: 100%; padding: 0.5rem; margin: 0.5rem 0; border-radius: 5px; border: 1px solid black;"></textarea><br>
+
+                    <label for="notes">Special Notes (Optional):</label><br>
+                    <textarea id="notes" name="notes" rows="2" placeholder="Extra napkins, sauce preferences..." style="width: 100%; padding: 0.5rem; margin: 0.5rem 0; border-radius: 5px; border: 1px solid black;"></textarea><br>
+
+                    <button type="submit" style="font-size: 1rem; padding: 0.8rem 1.5rem; border-radius: 15px; border: none; color: white; background-color: rgb(19,5,90); cursor: pointer; transition: 0.3s;">Place Order</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- ================= CONFIRMATION MESSAGE ================= -->
+        <section style="text-align: center; margin-top: 3rem;">
+            <p id="para_1">Your order will be confirmed and delivered to your address. Please keep cash ready for payment.</p>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <section id="footer">
+            <div id="links">
+                <a href="#">OUR FOOD</a>
+                <a href="#">FIND US</a>
+                <a href="#">NEWS</a>
+                <a href="#">WORK WITH US</a>
+                <a href="#">WHAT'S NEW</a>
+                <a href="#">ABOUT US</a>
+                <a href="#">CONTACT US</a>
+                <a href="#">TERM & CONDITIONS</a>
+            </div>
+            <div id="copyright">
+                <div id="pic">
+                    <a href="#"><img src="image.png" alt="pic"></a>
+                    <h6>©2025 Rev's Taco Shop IP Holder, LLC. All Rights Reserved.</h6>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
 </html>

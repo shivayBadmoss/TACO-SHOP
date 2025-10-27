@@ -3,35 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact_Us</title>
+    <title>Contact Us - Rev's Tacoshop</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* =========================
+           CONTACT US PAGE STYLES
+        ========================== */
+        #contact_section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 3rem 2rem;
+        }
+
+        .contact_heading {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: rgb(38,1,78);
+            margin-bottom: 1rem;
+        }
+
+        .contact_subheading {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact_info, .feedback_form {
+            background-color: rgba(255, 230, 200, 0.2);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 0.5rem 1.2rem rgba(0,0,0,0.15);
+            margin-bottom: 3rem;
+        }
+
+        .contact_info h4 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .contact_info p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+            border-radius: 15px;
+        }
+
+        /* Feedback form */
+        #feedback_form input, #feedback_form textarea {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.1rem;
+            border-radius: 12px;
+            border: 1px solid #000;
+            margin-bottom: 1.5rem;
+        }
+
+        #feedback_form button {
+            font-size: 1.3rem;
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            border: none;
+            background-color: rgb(19,5,90);
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        #feedback_form button:hover {
+            background-color: rgb(38,12,120);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            #contact_section {
+                padding: 2rem 1rem;
+            }
+
+            .contact_heading {
+                font-size: 2rem;
+            }
+
+            .contact_subheading {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1 align="center"><b><u>Contact Us</u></b></h1>
+        <nav>
+            <div id="nav_bar">
+                <div id="nav_bar_content"> 
+                    <a id="logo" href="index.html"><img src="image.png" alt="Rev's Tacoshop Logo"></a>
+                    <a href="Menu.html">MENU</a>
+                    <a href="Order.html">ORDER NOW</a>
+                    <a href="Confirmation.html">CONFIRMATION PAGE</a>
+                    <a href="Cod.html">COD</a>
+                    <a href="OnlinePay.html">ONLINE PAY</a>
+                    <a href="contactus.html">CONTACT US</a>
+                </div>
+            </div>
+        </nav>
     </header>
-    <main>
-    <form action="/action.php">
-        <h2>Send Us Your Prestigius Feedback OR Ask Us Your Quries</h2>
-        <textarea name="Send_us_a_Message_"id="102"placeholder="Send Us Your Feedback" rows="20" cols="80"></textarea>
-    </form>
-    <P><h3><u>Contact Us-</u></h3></P>
-    <p>
-        <h4>Store Email- Shivayagarwal08@gmail.com</h4>
-        <h4>Store Phone No.- 9616020074</h4>
-    </p>
-    <p>Our Stores Location:</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.1188710335036!2d77.2410203!3d28.656159199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfce26ec085ef%3A0x441e32f4fa5002fb!2sRed%20Fort!5e0!3m2!1sen!2sin!4v1756997111128!5m2!1sen!2sin" width="580" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" align="left">
-    </iframe>
-    </main>
-<br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br>
 
-     <footer>
-        <button onclick="window.open('index.html', '_blank')" style="width:200px;height:50px;font-size:20px;float:right;"Go_To_MainPage>Go To Main Page</button>
+    <main>
+        <section id="contact_section">
+            <h1 class="contact_heading">Contact Us</h1>
+            <h3 class="contact_subheading">We'd love to hear from you!</h3>
+
+            <!-- Shop Info -->
+            <div class="contact_info">
+                <h4>Our Shop Details</h4>
+                <p><b>Rev's Tacoshop, Red Fort Location</b><br>
+                   Established: 2020<br>
+                   Address: Red Fort, Netaji Subhash Marg, Chandni Chowk, New Delhi, India<br>
+                   Phone: +91-9876543210<br>
+                   Email: info@revstacoshop.com<br>
+                   Timing: 10:00 AM – 11:00 PM</p>
+            </div>
+
+            <!-- Google Map -->
+            <div class="contact_info">
+                <h4>Find Us Here</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.1188710335036!2d77.2410203!3d28.656159199999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfce26ec085ef%3A0x441e32f4fa5002fb!2sRed%20Fort!5e0!3m2!1sen!2sin!4v1756997111128!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <!-- Feedback Form -->
+            <div class="feedback_form">
+                <h4>Send Us Your Feedback</h4>
+                <form id="feedback_form" onsubmit="submitFeedback(event)">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <button type="submit">Submit Feedback</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section id="footer">
+            <div id="links">
+                <a href="#">OUR FOOD</a>
+                <a href="#">FIND US</a>
+                <a href="#">NEWS</a>
+                <a href="#">WORK WITH US</a>
+                <a href="#">WHAT'S NEW</a>
+                <a href="#">ABOUT US</a>
+                <a href="#">CONTACT US</a>
+                <a href="#">TERM & CONDITIONS</a>
+            </div>
+            <div id="copyright">
+                <div id="pic">
+                    <a href="#"><img src="image.png" alt="pic"></a>
+                    <h6>©2025 Rev's Taco Shop IP Holder, LLC. All Rights Reserved.</h6>
+                </div>
+            </div>
+        </section>
     </footer>
+
+    <script>
+        function submitFeedback(event) {
+            event.preventDefault();
+            alert("✅ Thank you for your feedback! We appreciate it.");
+            document.getElementById("feedback_form").reset();
+        }
+    </script>
 </body>
 </html>

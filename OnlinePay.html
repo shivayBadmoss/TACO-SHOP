@@ -3,63 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment_Online</title>
+    <title>Online Payment - Rev's Tacoshop</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* =========================
+           PAYMENT GRID LAYOUT
+        ========================== */
+        #payment_section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .payment_option {
+            background-color: rgba(255, 230, 200, 0.2);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .payment_option:hover {
+            box-shadow: 0 0.7rem 1.5rem rgba(0,0,0,0.2);
+        }
+
+        .payment_option h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: rgb(38,1,78);
+        }
+
+        .payment_option button {
+            font-size: 1.2rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 15px;
+            border: none;
+            background-color: rgb(19,5,90);
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .payment_option button:hover {
+            background-color: rgb(38,12,120);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            #payment_section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            #payment_section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-<header>
-    <h1 align="center"><b><u>Enter Your Details For Online Payment Method</u></b></h1>
+<body>
+    <header>
+        <nav>
+            <div id="nav_bar">
+                <div id="nav_bar_content"> 
+                    <a id="logo" href="index.html"><img src="image.png" alt="Rev's Tacoshop Logo"></a>
+                    <a href="Menu.html">MENU</a>
+                    <a href="Order.html">ORDER NOW</a>
+                    <a href="Confirmation.html">CONFIRMATION PAGE</a>
+                    <a href="Cod.html">COD</a>
+                    <a href="OnlinePay.html">ONLINE PAY</a>
+                    <a href="contactus.html">CONTACT US</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <br>
+    <main>
+        <h1 class="top_heading"><b>Online Payment</b></h1>
+        <h3 id="second_heading">Choose Your Payment Method</h3>
 
-    <form action="/action.php">
-        <lable>Your Address: </lable>
-        <input type="text" placeholder="your Address">
-        <br>        <br>
-        <lable>Contact:  </lable>
-        <input type="text" placeholder="Contact">
-        <br>        <br>
-        <lable>Resipants Name:  </lable>
-        <input type="text" placeholder="Resipants Name">
-        <br>        <br>
-        <lable>Alternative Number:  </lable>
-        <input type="text" placeholder="Alternative Number">
-        <br>        <br>
-        <p>Select Your UPI App</p>
-        <select name = "Method" id="Method">
-            <option value="Gpay">GPay</option>
-            <option value="FamPay">FamPay</option>
-            <option value="PayTM">PayTM</option>
-        </select>
-        
-        <br>        <br>        <br>
-        <p>Enter Some More Discription of Your Address for Our Delivery Partner-</p>
+        <section id="payment_section">
+            <!-- Credit/Debit Cards -->
+            <div class="payment_option">
+                <h3>Credit / Debit Card</h3>
+                <form onsubmit="showConfirmation(event)">
+                    <input type="text" placeholder="Card Number" required><br><br>
+                    <input type="text" placeholder="Expiry MM/YY" required><br><br>
+                    <input type="text" placeholder="CVV" required><br><br>
+                    <button type="submit">Place Order</button>
+                </form>
+            </div>
 
-   <textarea name="Additional_info_for_delivery"id="101"placeholder="Enter Some More Discription for Our Delivery Partner" rows="20" cols="80"></textarea>
+            <!-- UPI -->
+            <div class="payment_option">
+                <h3>UPI Payment</h3>
+                <form onsubmit="showConfirmation(event)">
+                    <input type="text" placeholder="Enter UPI ID" required><br><br>
+                    <button type="submit">Place Order</button>
+                </form>
+            </div>
 
-        <br>
-        <br>
-        <br>
+            <!-- Gift Vouchers -->
+            <div class="payment_option">
+                <h3>Gift Vouchers</h3>
+                <form onsubmit="showConfirmation(event)">
+                    <input type="text" placeholder="Enter Voucher Code" required><br><br>
+                    <button type="submit">Place Order</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-   <lable>Upload Paymeent Receipt Screenshot:</lable>
-   <input type="file" accept="image/*" id="payment-receipt">
+    <footer>
+        <section id="footer">
+            <div id="links">
+                <a href="#">OUR FOOD</a>
+                <a href="#">FIND US</a>
+                <a href="#">NEWS</a>
+                <a href="#">WORK WITH US</a>
+                <a href="#">WHAT'S NEW</a>
+                <a href="#">ABOUT US</a>
+                <a href="#">CONTACT US</a>
+                <a href="#">TERM & CONDITIONS</a>
+            </div>
+            <div id="copyright">
+                <div id="pic">
+                    <a href="#"><img src="image.png" alt="pic"></a>
+                    <h6>©2025 Rev's Taco Shop IP Holder, LLC. All Rights Reserved.</h6>
+                </div>
+            </div>
+        </section>
+    </footer>
 
-        <br>
-        <br>
-   
-   <input type="submit" value="Submit Response">
-        <br>        <br>       
-   <button type="reset">Reset Form</button>
-   <br><br><br>
-</form>
-</header>
-<main>
-     <center>
-     <button onclick="window.open('contactus.html', '_blank')" style="width:200px;height:50px;font-size:20px;"Go_To_ContactUs>Contact Us</button>
-     </center>
-</main>
-<br><br><br>
-<footer>
-     
-     <button onclick="window.open('index.html', '_blank')" style="width:200px;height:50px;font-size:20px;float:right;"Go_To_MainPage>Go To Main Page</button>
-     
-</footer>
+    <script>
+        function showConfirmation(event) {
+            event.preventDefault();
+            alert("✅ Your order has been placed successfully!");
+        }
+    </script>
+</body>
 </html>
