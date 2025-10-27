@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rev's Tacoshop | Order Page</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="Customization.css">
+</head>
+<body>
+    
+    <!-- =========================
+         HEADER & NAVIGATION
+    ========================= -->
+    <header>
+        <nav>
+            <div id="nav_bar">
+                <div id="nav_bar_content">
+                    <a id="logo" href="index.html"><img src="image.png" alt="Rev's Tacoshop Logo"></a>
+                    <a href="Menu.html">MENU</a>
+                    <a href="Customization.html">Customize Your Meal</a>
+                    <a href="Payment_M.html">Payment Method</a>
+                    <a href="Cod.html">COD</a>
+                    <a href="OnlinePay.html">ONLINE PAY</a>
+                    <a href="contactus.html">CONTACT US</a>
+
+                    
+                    <!-- <form id="form1" action="action.php" method="get">
+                        <input id="search_bar" type="text" placeholder="Search.......">
+                        <button id="search_button" type="button">Search</button>
+                    </form> -->
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- =========================
+         MAIN ORDER SECTION
+    ========================= -->
+    <main>
+        <section id="order_section">
+            <h1><u>Your Subway is Just Few Clicks Away</u></h1>
+            <h2><u>Customize Your Meal Now: Select What You’re Craving</u></h2>
+
+            <form id="order_form" action="action.php" method="post">
+                
+                <!-- Meal Choice -->
+                <div class="form_group">
+                    <h3>Select Your Meal</h3>
+                    <label><input type="checkbox" name="food" value="Sandwich"> Sandwich</label><br>
+                    <label><input type="checkbox" name="food" value="Burger"> Burger</label>
+                </div>
+
+                <!-- Bread Choice -->
+                <div class="form_group">
+                    <h3>Select The Type Of Bread You Want</h3>
+                    <label><input type="radio" name="bread-type" value="White Bread"> White Bread</label><br>
+                    <label><input type="radio" name="bread-type" value="Whole Wheat Bread"> Whole Wheat Bread</label><br>
+                    <label><input type="radio" name="bread-type" value="Sourdough Bread"> Sourdough Bread</label>
+                </div>
+
+                <!-- Veggie Choice -->
+                <div class="form_group">
+                    <h3>Select Veggies</h3>
+                    <label><input type="checkbox" name="veggies" value="Lettuce"> Lettuce</label><br>
+                    <label><input type="checkbox" name="veggies" value="Tomato"> Tomato</label><br>
+                    <label><input type="checkbox" name="veggies" value="Cucumber"> Cucumber</label><br>
+                    <label><input type="checkbox" name="veggies" value="Peppers"> Peppers</label><br>
+                    <label><input type="checkbox" name="veggies" value="Olives"> Olives</label><br>
+                    <label><input type="checkbox" name="veggies" value="Avocado"> Avocado</label>
+                </div>
+
+                <!-- Extra Description -->
+                <div class="form_group">
+                    <h3>Chef's Note</h3>
+                    <textarea name="feedback" id="feedback" placeholder="Enter some description for your meal..." rows="8"></textarea>
+                </div>
+
+                <!-- Buttons -->
+                <div class="form_buttons">
+                    <input type="submit" value="Submit Response">
+                    <input type="reset" value="Reset Form">
+                </div>
+
+            </form>
+
+            <!-- Navigation Buttons -->
+            <div id="order_links">
+                <button onclick="window.location.href='Payment_M.html'">Confirm Your Order</button>
+                <button onclick="window.location.href='index.html'">Go To Main Page</button>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- =========================
+         FOOTER SECTION
+    ========================= -->
+    <footer>
+        <section id="footer">
+            <div id="links">
+                <a href="#">OUR FOOD</a>
+                <a href="#">FIND US</a>
+                <a href="#">NEWS</a>
+                <a href="#">WORK WITH US</a>
+                <a href="#">WHAT'S NEW</a>
+                <a href="#">ABOUT US</a>
+                <a href="#">CONTACT US</a>
+                <a href="#">TERMS & CONDITIONS</a>
+            </div>
+
+            <div id="copyright">
+                <div id="pic">
+                    <a href="#"><img src="image.png" alt="Footer Logo"></a>
+                    <h6>©2025 Rev's Tacoshop IP Holder, LLC. All Rights Reserved.</h6>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+</body>
+</html>

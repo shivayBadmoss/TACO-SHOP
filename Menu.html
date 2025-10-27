@@ -11,19 +11,19 @@
     <header>
     <nav>
         <div id="nav_bar">
-            <div id="nav_bar_content"> 
-                <a id="logo" href="index.html"><img src="image.png" alt="Rev's Tacoshop Logo"></a>
-                <a href="Menu.html">MENU</a>
-                <a href="Order.html">ORDER NOW</a>
-                <a href="Confirmation.html">CONFIRMATION PAGE</a>
-                <a href="Cod.html">COD</a>
-                <a href="OnlinePay.html">ONLINE PAY</a>
-                <a href="contactus.html">CONTACT US</a>
+                <div id="nav_bar_content">
+                    <a id="logo" href="index.html"><img src="image.png" alt="Rev's Tacoshop Logo"></a>
+                    <a href="Menu.html">MENU</a>
+                    <a href="Customization.html">Customize Your Meal</a>
+                    <a href="Payment_M.html">Payment Method</a>
+                    <a href="Cod.html">COD</a>
+                    <a href="OnlinePay.html">ONLINE PAY</a>
+                    <a href="contactus.html">CONTACT US</a>
 
-                <form id="form1" action="action.php" method="get">
+                <!-- <form id="form1" action="action.php" method="get">
                     <input id="search_bar" type="text" placeholder="Search.......">
                     <button id="search_button" type="button">Search</button>
-                </form>
+                </form> -->
             </div>
         </div>
     </nav>
@@ -91,6 +91,42 @@
 
     </div>
 </section>
+<!-- =========================
+     CUSTOMER MEAL SELECTION
+========================= -->
+<section id="meal_selection">
+    <h2 class="meal_heading">Choose Your Favorite Meal</h2>
+    <form id="meal_form" action="#" method="post">
+        <label for="meal_list"><b>Select a Taco:</b></label><br><br>
+        <select id="meal_list" name="meal_list">
+            <option value="">-- Select Your Taco --</option>
+            <option value="beef_taco">Classic Beef Taco</option>
+            <option value="chicken_taco">Grilled Chicken Taco</option>
+            <option value="veggie_taco">Garden Veggie Taco</option>
+            <option value="salsa_taco">Fire Salsa Taco 🌶</option>
+            <option value="cheese_taco">Cheese Blast Taco 🧀</option>
+            <option value="paneer_taco">Paneer Mexicano</option>
+            <option value="bbq_taco">BBQ Smokehouse</option>
+            <option value="supreme_taco">El Supremo 🌮✨</option>
+        </select>
+        <br><br>
+
+       <!-- Horizontal button to go to Confirmation Page -->
+        <button id="confirm_button" type="button" onclick="window.location.href='Payment_M.html'">
+            Select Your Payment Method and Pay
+        </button>
+
+        <br><br><hr><br>
+
+         <!-- Button to go to Order Page -->
+        <button id="order_button" type="button" onclick="window.location.href='Customization.html'">
+            Custmize Your Meal
+        </button>
+
+       
+    </form>
+</section>
+
 <footer>
     <section id="footer">
         <div id="links">

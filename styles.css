@@ -33,6 +33,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
+    padding-top: 0%;
     background-color: rgba(62, 58, 53, 0.2);
 }
 
@@ -62,9 +63,11 @@ header a:not(#logo) {
     display: flex;
     align-items: center;
     margin-top: 0.5rem;
+    margin-left: 1rem;
 }
 
 #search_bar {
+    width: 150px;
     padding: 0.5rem;
     font-size: 0.9rem;
     border-radius: 5px;
@@ -75,8 +78,8 @@ header a:not(#logo) {
 #search_button {
     background-color: rgb(12, 12, 12);
     color: white;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
+    padding: 0.35rem 0.8rem;
+    font-size: 0.8rem;
     border-radius: 5px;
     border: none;
     margin-left: 0.5rem;
