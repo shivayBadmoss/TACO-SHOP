@@ -22,11 +22,41 @@
             </div>
         </nav>
     </header>
+    
+        <!--~~~~~~~~~~~~~~~~ PRsnl Detail FORM  ~~~~~~~~~~~~~~~~~~~~~~~~-->
 
-    <!-- ✅ PAYMENT SECTION -->
+
+        <section id="menu" style="margin: 2rem auto; max-width: 600px;">
+            <div class="menu_heading">Fill in Your Details</div>
+            <div style="background-color: rgba(255, 230, 200, 0.2); padding: 2rem; border-radius: 15px; box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.1);">
+                <form id="cod_form" onsubmit="showConfirmation(event)">
+
+                    <label for="name">Full Name:</label><br>
+                   <input type="text" id="name" name="name" placeholder="Your Full Name" required style="width: 100%; padding: 0.5rem; margin: 0.5rem 0; border-radius: 5px; border: 1px solid black;"><br>  <!-- this required will give pop up until the fei;d is not filled -->
+
+                    <label for="phone">Phone Number:</label><br>
+                    <input type="tel" id="phone" name="phone" placeholder="+91 9616020074" required style="width: 100%; padding: 0.5rem; margin: 0.5rem 0; border-radius: 5px; border: 1px solid black;"><br>
+
+                    <label for="Email">Email Address:</label><br>
+                    <input type="text" id="Email Address" name="Email Address" placeholder="Enter Your Eamil Address" required style="width: 100%; padding: 0.5rem; margin: 0.5rem 0; border-radius: 5px; border: 1px solid black;"><br>
+
+                    <label for="notes">Special Notes (Optional):</label><br>
+                    <textarea id="notes" name="notes" rows="4" placeholder="Extra napkins, sauce preferences..." style="width: 100%; padding: 0.5rem; margin: 0.5rem 0; border-radius: 5px; border: 1px solid black;"></textarea><br>
+
+                    <button type="submit" style="font-size: 1rem; padding: 0.8rem 1.5rem; border-radius: 15px; border: none; color: white; background-color: rgb(19,5,90); cursor: pointer; transition: 0.3s;" required>SUBMIT </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!--  PAYMENT SECTION -->
+
+
     <main id="payment_section">
         <div id="payment_box">
-            <h3 id="payment_title">Choose a Payment Method</h3>
+            <h3 id="payment_title" style="font-size:xx-large">Choose a Payment Method</h3>
 
             <div class="payment_buttons">
                 <button id="cod_btn" onclick="location.href='Cod.html'">Cash On Delivery</button>
@@ -63,4 +93,15 @@
     </footer>
 
 </body>
+
+        <!-- ~~~~~~~~~~~~~~ CONFIRMATION MESSAGE ~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+
+        <script>
+        function showConfirmation(event) {
+            event.preventDefault();
+            alert("Thank You for sharing Details!!");
+        }
+    </script>
+
 </html>

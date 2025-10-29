@@ -48,7 +48,7 @@ header h2 {
 
 }
 
-#payment_box h3 {
+#payment_title{
     text-align: center !important;
     width: 100%;
     display: block;
@@ -56,12 +56,12 @@ header h2 {
     margin-right: auto;
 }
 
-/* ✅ Remove #payment_box — not used anymore */
 
 
-/* =========================
-   BUTTONS
-========================= */
+/* 
+~~~~~~~~~~~~PAYMENT BUTTONS~~~~~~~~~~~~~~~~
+*/
+
 .payment_buttons {
     display: flex;
     justify-content: center;
