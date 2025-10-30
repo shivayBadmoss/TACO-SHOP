@@ -44,43 +44,68 @@
             <h1><u>Your Subway is Just Few Clicks Away</u></h1>
             <h2><u>Customize Your Meal Now: Select What You’re Craving</u></h2>
 
-            <form id="order_form" action="action.php" method="post">
+            <form id="order_form" action="https://sheetdb.io/api/v1/ohk632bkkq5s9" method="post">
                 
                 <!-- Meal Choice -->
 
                 <div class="form_group">
                     <h3>Select Your Meal</h3>
-                    <label><input type="checkbox" name="food" value="Sandwich" > Sandwich</label><br>
-                    <label><input type="checkbox" name="food" value="Burger"> Burger</label>
+                    <label><input type="checkbox" name="data[FOOD]" value="Sandwich" > Sandwich</label><br>
+                    <label><input type="checkbox" name="data[FOOD]" value="Burger"> Burger</label>
                 </div>
 
                 <!-- Bread Choice -->
 
                 <div class="form_group">
                     <h3>Select The Type Of Bread You Want</h3>
-                    <label><input type="radio" name="bread-type" value="White Bread"> White Bread</label><br>
-                    <label><input type="radio" name="bread-type" value="Whole Wheat Bread"> Whole Wheat Bread</label><br>
-                    <label><input type="radio" name="bread-type" value="Sourdough Bread"> Sourdough Bread</label>
+                    <label><input type="radio" name="data[bread-type]" value="White Bread"> White Bread</label><br>
+                    <label><input type="radio" name="data[bread-type]" value="Whole Wheat Bread"> Whole Wheat Bread</label><br>
+                    <label><input type="radio" name="data[bread-type]" value="Sourdough Bread"> Sourdough Bread</label>
                 </div>
 
                 <!-- Veggie Choice -->
 
                 <div class="form_group">
                     <h3>Select Veggies</h3>
-                    <label><input type="checkbox" name="veggies" value="Lettuce"> Lettuce</label><br>
-                    <label><input type="checkbox" name="veggies" value="Tomato"> Tomato</label><br>
-                    <label><input type="checkbox" name="veggies" value="Cucumber"> Cucumber</label><br>
-                    <label><input type="checkbox" name="veggies" value="Peppers"> Peppers</label><br>
-                    <label><input type="checkbox" name="veggies" value="Olives"> Olives</label><br>
-                    <label><input type="checkbox" name="veggies" value="Avocado"> Avocado</label>
+                    <label><input type="checkbox" name="data[veggies]" value="Lettuce"> Lettuce</label><br>
+                    <label><input type="checkbox" name="data[veggies]" value="Tomato"> Tomato</label><br>
+                    <label><input type="checkbox" name="data[veggies]" value="Cucumber"> Cucumber</label><br>
+                    <label><input type="checkbox" name="data[veggies]" value="Peppers"> Peppers</label><br>
+                    <label><input type="checkbox" name="data[veggies]" value="Olives"> Olives</label><br>
+                    <label><input type="checkbox" name="data[veggies]" value="Avocado"> Avocado</label>
                 </div>
 
                 <!-- Extra Description -->
 
                 <div class="form_group">
                     <h3>Chef's Note</h3>
-                    <textarea name="feedback" id="feedback" placeholder="Enter some description for your meal..." rows="8"></textarea>
+                    <textarea name="data[feedback]" id="feedback" placeholder="Enter some description for your meal..." rows="8"></textarea>
                 </div>
+
+                    <!--SCript for desplaying msg -->
+
+                <script>
+                var form = document.getElementById('order_form');
+
+                form.addEventListener("submit", e => {
+                e.preventDefault();
+
+                fetch(form.action, {
+                method: "POST",
+                     body: new FormData(form)
+                 })
+                     .then(response => response.json())
+                 .then(data => {
+                                    alert('Submitted !! 😊 Thank you ');
+                    window.location.href = '';
+                 location.reload();
+                      })
+              .catch(error => {
+                      console.error('Error:', error);
+                  alert('Something went wrong. Please try again!');
+                      });
+                    });
+                </script>
 
                 <!-- Buttons -->
 
